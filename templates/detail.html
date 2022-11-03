@@ -1,0 +1,41 @@
+{% extends "layouts/base.html" %} {% load static %} {% block styles %}
+<link rel="stylesheet" href="{% static 'assets/css/sidebar.css' %}" />
+{% endblock %} {% block content %}
+<section class="content py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-12">
+        {% include 'components/sidebar.html' %}
+      </div>
+      <div class="col-md-9 col-sm-12">
+        <div class="card">
+            <div class="card-header d-flex align-items-center">
+                <i class="bi bi-arrow-left-circle fs-5 cursor-pointer" onclick="history.back()"></i> &nbsp;&nbsp;&nbsp;&nbsp;
+                <h4 class="mb-0">{{ employee.fullname }}</h4>
+            </div>
+            <div class="card-body">
+                <dl class="row mb-0">
+                    <dt class="col-sm-3">ФИО</dt>
+                    <dd class="col-sm-9">{{ employee.fullname }}</dd>
+
+                    <dt class="col-sm-3">Должность</dt>
+                    <dd class="col-sm-9">{{ employee.job_title }}</dd>
+
+                    <dt class="col-sm-3">Дата приема на работу</dt>
+                    <dd class="col-sm-9">{{ employee.employment_date|date:"d.m.Y" }}</dd>
+
+                    <dt class="col-sm-3">Размер заработной платы</dt>
+                    <dd class="col-sm-9">{{ employee.salary }}</dd>
+
+                    <dt class="col-sm-3">Подразделение</dt>
+                    <dd class="col-sm-9"><a href="/employees/{{ employee.department.id }}">{{ employee.department.name }}</a></dd>
+                </dl>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %} {% block scripts %}
+<script src="{% static 'assets/js/sidebar.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,45 @@
+<div class="list-header-footer d-flex justify-content-between">
+  <div class="pagination">
+    <span class="step-links">
+      {% if employees.has_previous %}
+      <a href="?page=1&size={{ page_size }}"><i class="bi bi-chevron-bar-left"></i></a>
+      <a href="?page={{ employees.previous_page_number }}&size={{ page_size }}"
+        ><i class="bi bi-chevron-left"></i
+      ></a>
+      {% endif %}
+
+      <span class="current">
+        Страница {{ employees.number }} из {{ employees.paginator.num_pages }}
+      </span>
+
+      {% if employees.has_next %}
+      <a href="?page={{ employees.next_page_number }}&size={{ page_size }}"
+        ><i class="bi bi-chevron-right fw-bold"></i
+      ></a>
+      <a href="?page={{ employees.paginator.num_pages }}&size={{ page_size }}"
+        ><i class="bi bi-chevron-bar-right"></i
+      ></a>
+      {% endif %}
+    </span>
+  </div>
+  <div class="page-size">
+    <div class="dropdown">
+      <button
+        class="btn btn-outline-dark dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        {{ page_size }}
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="min-width: 60px">
+        <li><a class="dropdown-item text-center" href="/employees/{% if department.id %}{{ department.id }}{% else %}0{% endif %}/?page={{ page_number }}&size=5">5</a></li>
+        <li><a class="dropdown-item text-center" href="/employees/{% if department.id %}{{ department.id }}{% else %}0{% endif %}/?page={{ page_number }}&size=10">10</a></li>
+        <li><a class="dropdown-item text-center" href="/employees/{% if department.id %}{{ department.id }}{% else %}0{% endif %}/?page={{ page_number }}&size=25">25</a></li>
+        <li><a class="dropdown-item text-center" href="/employees/{% if department.id %}{{ department.id }}{% else %}0{% endif %}/?page={{ page_number }}&size=50">50</a></li>
+        <li><a class="dropdown-item text-center" href="/employees/{% if department.id %}{{ department.id }}{% else %}0{% endif %}/?page={{ page_number }}&size=100">100</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

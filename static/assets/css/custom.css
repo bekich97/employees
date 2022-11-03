@@ -1,0 +1,31 @@
+.all-link{
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+
+.pagination{
+    padding: 5px 0;
+}
+
+.page-size select.form-control{
+    line-height: 1;
+    padding: 5px 8px;
+    text-align: center;
+    width: 50px;
+}
+
+.pagination .current{
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.pagination a{
+    background-color: #6e6e6e;
+    color: #ffffff;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+{% include 'components/pagination.html' %}
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ФИО</th>
+      <th scope="col">Должность</th>
+      <th scope="col">Дата приема на работу</th>
+      <th scope="col">Размер заработной платы</th>
+      <th scope="col">Подразделение</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for employee in employees %}
+    <tr>
+      <th scope="row">
+        <a href="/employees/{{ employee.id }}/detail">{{ employee.fullname }}</a>
+      </th>
+      <td>{{ employee.job_title }}</td>
+      <td>{{ employee.employment_date|date:"d.m.Y" }}</td>
+      <td>{{ employee.salary }}</td>
+      <td>{{ employee.department }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% include 'components/pagination.html' %}

@@ -1,0 +1,33 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS files -->
+    <link href="{% static 'assets/vendor/bootstrap-5.0.2/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap-icons-1.9.1/package/font/bootstrap-icons.css' %}">
+    <title>Employees App</title>
+    <!-- Custom CSS files -->
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+    {% block styles %}
+    {% endblock %}
+  </head>
+  <body>
+    <main>
+        {% include "layouts/header.html" %}
+        {% block content %}
+        {% endblock %}
+        {% include "layouts/footer.html" %}
+    </main>
+    <!-- JS files -->
+    <script src="{% static 'assets/vendor/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap-5.0.2/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Custom JS files -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    {% block scripts %}
+    {% endblock %}
+  </body>
+</html>

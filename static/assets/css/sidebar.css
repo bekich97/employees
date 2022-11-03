@@ -1,0 +1,56 @@
+.sidebar li .submenu{ 
+	list-style: none; 
+	margin: 0; 
+	padding: 0; 
+	padding-left: 1rem; 
+	padding-right: 1rem;
+}
+
+#nav_accordion ul{
+    padding-left: 20px;
+}
+
+#nav_accordion ul li{
+    border-left: 2px solid #b1b1b1;
+}
+
+#nav_accordion a{
+    color: #343a40;
+}
+
+@-moz-keyframes icono { 
+    0% { 
+        -webkit-transform: rotate(0deg); 
+        transform:rotate(0deg); 
+    } 
+    100% { 
+        -webkit-transform: rotate(90deg); 
+        transform:rotate(90deg); 
+    } 
+}
+@-webkit-keyframes icono { 
+    0% { 
+        -webkit-transform: rotate(0deg); 
+        transform:rotate(0deg); 
+    } 
+    100% { 
+        -webkit-transform: rotate(90deg); 
+        transform:rotate(90deg); 
+    } 
+}
+
+@keyframes icono { 
+    0% { 
+        -webkit-transform: rotate(0deg); 
+        transform:rotate(0deg); 
+    } 
+    100% { 
+        -webkit-transform: rotate(90deg); 
+        transform:rotate(90deg); 
+    } 
+}
+
+li:has(> ul.submenu.collapse.show) > a i::before{
+    transform: rotate(90deg);
+    animation: icono .2s linear;
+}
