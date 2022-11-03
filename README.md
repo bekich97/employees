@@ -45,3 +45,20 @@ Admin panel: ```http://127.0.0.1:8000/admin```
 Login username: user
 
 Login password: 121212
+
+## Screenshots
+
+### Client
+
+![Client 1](./screenshots/client/client1.png)
+![Client 2](./screenshots/client/client2.png)
+![Client 3](./screenshots/client/client3.png)
+![Client 4](./screenshots/client/client4.png)
+
+### Admin
+
+![Admin 1](./screenshots/admin/admin1.png)
+![Admin 2](./screenshots/admin/admin2.png)
+![Admin 3](./screenshots/admin/admin3.png)
+![Admin 4](./screenshots/admin/admin4.png)
+![Admin 5](./screenshots/admin/admin5.png)
