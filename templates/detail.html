@@ -15,19 +15,19 @@
             </div>
             <div class="card-body">
                 <dl class="row mb-0">
-                    <dt class="col-sm-3">ФИО</dt>
+                    <dt class="col-sm-3">ФИО:</dt>
                     <dd class="col-sm-9">{{ employee.fullname }}</dd>
 
-                    <dt class="col-sm-3">Должность</dt>
+                    <dt class="col-sm-3">Должность:</dt>
                     <dd class="col-sm-9">{{ employee.job_title }}</dd>
 
-                    <dt class="col-sm-3">Дата приема на работу</dt>
+                    <dt class="col-sm-3">Дата приема на работу:</dt>
                     <dd class="col-sm-9">{{ employee.employment_date|date:"d.m.Y" }}</dd>
 
-                    <dt class="col-sm-3">Размер заработной платы</dt>
+                    <dt class="col-sm-3">Размер заработной платы:</dt>
                     <dd class="col-sm-9">{{ employee.salary }}</dd>
 
-                    <dt class="col-sm-3">Подразделение</dt>
+                    <dt class="col-sm-3">Подразделение:</dt>
                     <dd class="col-sm-9"><a href="/employees/{{ employee.department.id }}">{{ employee.department.name }}</a></dd>
                 </dl>
             </div>
