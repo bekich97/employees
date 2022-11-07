@@ -16,9 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from .views import index
+import requests
+
+def trigger_error(request):
+    r = requests.get('https://unknownserver-notserver.com/url/path')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('employees/', include('employee.urls')),
+    path('sentry-debug/', trigger_error),
     path('', index, name="index"),
 ]
